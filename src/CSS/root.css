@@ -1,12 +1,11 @@
 body, html {
     width: auto;
     height: 100%;
-    margin: 0;
     padding: 0;
     background-color: white !important;
     font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif !important;
     line-height: 1.45 !important;
-    margin-top: 1vh;
+    margin: 1vh 0 0;
     color: black !important;
     font-size: 1.08em !important;
     overflow-wrap: break-word !important;
@@ -18,7 +17,7 @@ body, html {
 }
 
 h1, h2, h3 {
-    font-family: 'Cinzel' !important;
+    font-family: "Cinzel", "Droid Serif", "sans-serif" !important;
     letter-spacing: 2px;
     font-weight: 700 !important;
     font-size: 1.4em !important;
@@ -75,35 +74,11 @@ span, .string, .number, .call, .def, .code {
     display: block;
     width: 100vw;
     height: fit-content;
-    height: -moz-fit-content;
 }
 
 button {
     border: none;
     border-radius: 1em !important;
-}
-
-.gg-play-button {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 2em;
-    height: 2em;
-    color: green;
-}
-
-.gg-play-button::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    height: 1.5em;
-    border-top: 0.8em solid transparent;
-    border-bottom: 0.8em solid transparent;
-    border-left: 1em solid;
-    top: 0.15em;
-    left: 0.6em;
 }
 
 .hint {
@@ -122,8 +97,6 @@ button {
     /* Bootstrap Settings */
     box-sizing: border-box;
     margin: 0;
-    overflow: auto;
-    font-family: inherit;
     display: block;
     width: 100%;
     font-size: 14px;
@@ -133,7 +106,6 @@ button {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); /* Bootstrap 3 */
     box-shadow: none; /* Bootstrap 4 */
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     /* Code Mirror Settings */
