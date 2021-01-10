@@ -132,7 +132,7 @@ class PythonEditor extends KJSComponent {
           <div class="col">
                 <textarea id="yourcode"># Your code goes under this line&#10;&#10;</textarea>
                 <div class="align-items-end d-flex">
-                  <button class="${this.styles.submitButton} btn btn-primary ml-auto" id="runShellButton" type="button" onclick="() => runIt()"
+                  <button class="${this.styles.submitButton} btn btn-primary ml-auto" id="runShellButton" type="button" onclick="runIt()"
                   data-trigger="hover" data-toggle="popover" data-content="Shift+Enter inside code editor"
                   >
                   run_code()

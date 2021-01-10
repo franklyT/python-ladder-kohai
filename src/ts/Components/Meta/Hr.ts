@@ -23,7 +23,7 @@ class Hr extends KJSMetaComponent {
   }
   get html() {
     return /*html*/ `
-    <hr style='width: ${this.width}; border: none; border-bottom: ${this.height} solid ${this.color};'>
+    <hr style="width: ${this.width}; border: none; border-bottom: ${this.height} solid ${this.color};">
     `;
   }
 }
