@@ -39,7 +39,7 @@ class TestCases extends KJSComponent {
 
       // @ts-ignore
       this.cases[testCase] = cases[testCase];
-      var appendTestCase = document.createElement("p");
+      let appendTestCase = document.createElement("p");
       appendTestCase.innerHTML =
         cases[testCase].case + " -> " + cases[testCase].expectedReturn + "\n";
 
@@ -49,10 +49,10 @@ class TestCases extends KJSComponent {
 
   styleCode() {
     document.querySelectorAll(".code").forEach((elm: any) => {
-      var code = elm.textContent.trim();
+      let code = elm.textContent.trim();
       elm.innerHTML = "";
 
-      var myCodeMirror = CodeMirror(elm, {
+      let myCodeMirror = CodeMirror(elm, {
         value: code,
         mode: "python",
         lineNumbers: 1,
@@ -65,7 +65,7 @@ class TestCases extends KJSComponent {
 
   (window as any).testIt = () => {
     // this passed with fat arrow
-    var hasRightAnswers = Object.keys(this.cases).every((separateCase: any) => {
+    let hasRightAnswers = Object.keys(this.cases).every((separateCase: any) => {
       return String(document.getElementById("test-output")!.innerHTML).includes(
         // @ts-ignore
         this.cases[separateCase].expectedReturn
