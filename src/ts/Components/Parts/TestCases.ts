@@ -55,9 +55,7 @@ class TestCases extends KJSComponent {
       let myCodeMirror = CodeMirror(elm, {
         value: code,
         mode: "python",
-        lineNumbers: 1,
-        readOnly: true,
-        gutter: false,
+        readOnly: true
       });
 
       myCodeMirror.setSize("100%", "auto");

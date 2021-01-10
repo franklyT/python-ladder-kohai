@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/franklyT/mini-static-gen#readme",
   "dependencies": {
+    "@types/codemirror": "0.0.106",
     "@types/common-tags": "^1.8.0",
     "common-tags": "^1.8.0",
     "faster.js": "^1.1.1",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@types/jquery": "^3.5.5",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-minify": "^0.5.1",

@@ -112,7 +112,7 @@ class PythonEditor extends KJSComponent {
     }
 
     window.onload = function () {
-      editor = CodeMirror.fromTextArea(document.getElementById("yourcode"), {
+      editor = CodeMirror.fromTextArea(<HTMLTextAreaElement>document.getElementById("yourcode"), {
         mode: {
           mode: "python",
           name: "python",
