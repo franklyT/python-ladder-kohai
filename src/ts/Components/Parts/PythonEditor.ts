@@ -1,3 +1,4 @@
+// noinspection PointlessBooleanExpressionJS
 class PythonEditor extends KJSComponent {
   constructor() {
     super();
@@ -50,6 +51,7 @@ class PythonEditor extends KJSComponent {
 
       globalOutput = outputID;
 
+      // noinspection PointlessBooleanExpressionJS
       testing === false
         ? (globalInput = editor.getValue())
         : (globalInput =

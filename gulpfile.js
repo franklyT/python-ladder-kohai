@@ -2,7 +2,7 @@
 
 const GULP = require("gulp");
 const GUTIL = require("gulp-util");
-const GAP = require('gulp-append-prepend');
+// const GAP = require('gulp-append-prepend');
 const GBABEL = require('gulp-babel');
 const GTS = require("gulp-typescript");
 const GTSPROJ = GTS.createProject("tsconfig.json");
@@ -25,15 +25,14 @@ GULP.task("build-css", function (cb) {
 });
 
 GULP.task("build-ts", function () {
-  var tsResult = 
+  let tsResult =
     GULP.src("./src/ts/**/*.ts")
         .pipe(GTSPROJ());
 
-  var tsFinalResult = tsResult.js;
+    let tsFinalResult = tsResult.js;
   return tsFinalResult
   .pipe(CONCAT('root.min.js'))
   // .pipe(GAP.appendFile('./src/ts/__root/KJSComponent.js'))
-
   // .pipe(GAP.appendFile('./src/js/_root/root.js'))
   .pipe(GBABEL({
     presets: 
