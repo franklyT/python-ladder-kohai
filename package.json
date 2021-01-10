@@ -1,0 +1,40 @@
+{
+  "name": "mini-static-gen",
+  "version": "1.0.0",
+  "description": "build-site builds the following from an src folder to dist:",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franklyT/mini-static-gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franklyT/mini-static-gen/issues"
+  },
+  "homepage": "https://github.com/franklyT/mini-static-gen#readme",
+  "dependencies": {
+    "@types/common-tags": "^1.8.0",
+    "common-tags": "^1.8.0",
+    "faster.js": "^1.1.1",
+    "gulp-append-prepend": "^1.0.8",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "typescript": "^4.1.3"
+  }
+}
