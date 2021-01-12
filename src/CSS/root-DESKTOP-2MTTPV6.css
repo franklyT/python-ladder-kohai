@@ -1,0 +1,151 @@
+body, html {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white !important;
+    font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif !important;
+    line-height: 1.45 !important;
+    margin-top: 1vh;
+    color: black !important;
+    font-size: 1.08em !important;
+    overflow-wrap: break-word !important;
+
+    margin-right: 20vw;
+    margin-left: 20vw;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel' !important;
+    letter-spacing: 2px;
+    font-weight: 700 !important;
+    font-size: 1.4em !important;
+    margin: 1em !important;
+    margin-left: 0 !important;
+    white-space: nowrap !important;
+}
+
+li {
+    line-height: 1.6 !important;
+}
+
+a {
+    color: #9f82b2 !important;
+    font-weight: 600;
+}
+
+code {
+    color: #00f !important;
+    font-family: monospace;
+    font-size: 1em !important;
+}
+
+.string {
+    color: #a11;
+}
+
+.number {
+    color: #164;
+}
+
+.call {
+    color: #708;
+}
+
+.def {
+    color: #00f;
+}
+
+.code-block {
+    font-family: monospace;
+}
+
+.code {
+    font-family: monospace;
+    font-size: 0.90em;
+}
+
+span, .string, .number, .call, .def, .code {
+    font-family: monospace !important;
+}
+
+.root__container {
+    display: block;
+    width: 100vw;
+    height: fit-content;
+    height: -moz-fit-content;
+}
+
+button {
+    border: none;
+    border-radius: 1em !important;
+}
+
+.gg-play-button {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 2em;
+    height: 2em;
+    color: green;
+}
+
+.gg-play-button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 1.5em;
+    border-top: 0.8em solid transparent;
+    border-bottom: 0.8em solid transparent;
+    border-left: 1em solid;
+    top: 0.15em;
+    left: 0.6em;
+}
+
+.hint {
+    max-height: 20vh;
+    height: auto;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.hidden-hint {
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.CodeMirror {
+    /* Bootstrap Settings */
+    box-sizing: border-box;
+    margin: 0;
+    overflow: auto;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); /* Bootstrap 3 */
+    box-shadow: none; /* Bootstrap 4 */
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    /* Code Mirror Settings */
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+  }
+      
+  .CodeMirror-focused {
+    /* Bootstrap Settings */
+    border-color: lightblue;
+    outline: 0;
+    box-shadow: 0 0 0 .05rem lightblue; /* Bootstrap 4 */
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+
+  /* Bootstrap Shims */
