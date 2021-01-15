@@ -1,4 +1,4 @@
-// noinspection PointlessBooleanExpressionJS
+declare let Sk: any;
 class PythonEditor extends KJSComponent {
   constructor() {
     super();

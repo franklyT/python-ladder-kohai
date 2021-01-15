@@ -13,8 +13,7 @@ class Footer extends KJSComponent {
 
   get html() {
     return /*html*/ `
-      <div class="${this.styles.container}">
-      </div>
+      <div class="${this.styles.container}"></div>
     `;
   }
 }
