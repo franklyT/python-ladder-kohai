@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../CSS/root.min.css" type="text/css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+          rel="stylesheet" />
+    <script src="../js/root-lib.min.js"></script>
+    <script src="../js/root.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      new Head();
+      new Exercise({
+        exerciseNum: "6",
+        header: "GET_MIDDLE",
+        instructions: /*html*/ `
+            If asked, someone with two siblings would trivially be able to tell you if they were the 
+            "middle" sibling. Of three, there is one sibling definitively in the middle.
+            <br /> <br />
+            Define a function get_middle that takes one argument, str as a string, and returns the 
+            middle character. Remember, this is an operation that is only technically completely 
+            trivial in one case. If your function cannot find a "middle" character in a given string, 
+            print the middle two characters.
+            `,
+        links: { previous: "./exercise_5.html", next: "./exercise_7" },
+      });
+
+      new PythonEditor();
+      
+      new TestCases({
+        cases: {
+          case1: {
+            case: "get_middle('Hello')",
+            expectedReturn: 'l',
+          },
+          case2: {
+            case: "get_middle('   Hello, world!')",
+            expectedReturn: "o,",
+          },
+        },
+      });
+
+      new Hints({
+        hints: {
+          hint1: `Firstly, think about how we could simply loop through our string and count how many times the loop ran.
+                  A variable might help here.
+                `,
+          hint2: `There's a particular way we can check to see if each character in our string matches our character:
+                  a simple <a href="https://www.freecodecamp.org/news/if-elif-else-statements/">conditional</a>.
+                `,
+        },
+      });
+
+      new Footer();
+
+      selfDestruct();
+    </script>
+  </body>
+</html>

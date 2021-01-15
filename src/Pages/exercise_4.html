@@ -15,25 +15,27 @@
     <script>
       new Head();
       new Exercise({
-        exerciseNum: "2",
-        header: "CHECKERBOARD",
+        exerciseNum: "4",
+        header: "CUSTOM_RANGE",
         instructions: /*html*/ `
-            A checkerboard, aside from its eponymous usage (to play the game checkers!), is a commonly 
-            expressed pattern consisting of alternating squares (usually white and black), laid out 
-            in a 2-dimensional grid - a pattern we can express in terms of "rows" and "columns".
-            <br /><br />
-            Define a function checkerboard that takes two arguments, an integer representing "rows" 
-            and "columns" respectively.
+            The range function in Python is a profoundly common operation, such that we've 
+            probably already used it multiple times in our lessons thus far. As a result, 
+            Python providing us with a built-in definition for range is hugely useful.
             <br /> <br />
-            This function should return a checkerboard of the appropriate size (e.g. 8 rows 
-            by 8 columns), with a unique character to represent each alternating color square.
+            In contrast, a language like JavaScript actually has no definition for range in its 
+            "standard library". Those who would like to take advantage of this powerful function 
+            must either import a third-party library with this functionality, or write their own 
+            code.
             <br /> <br />
-            Note: Python secretly appends a newline character ("\\n") to each print statement.
-            To override this behavior, provide a second argument to a print statement (named end),
-            and set its value to an empty string. By default, this second argument, as you might 
-            expect, has a "\\n" value. 
+            The good news is that to define a range function is actually a fairly trivial endeavor!
+            As such, we're going to prove it by re-writing a basic range function in Python.
+            You don't need to include the step parameter, which increments a range by a specified 
+            amount instead of just 1, but if you would like, you can!
+            <br /> <br />
+            Define a function, custom_range, that takes two arguments, min and max, that prints out
+            a range, expressed in a list, between the given min and max arguments.
             `,
-        links: { previous: "./exercise_1.html", next: "./exercise_3.html" },
+        links: { previous: "./exercise_3.html", next: "./exercise_5.html" },
       });
 
       new PythonEditor();

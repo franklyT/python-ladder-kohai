@@ -15,25 +15,17 @@
     <script>
       new Head();
       new Exercise({
-        exerciseNum: "2",
-        header: "CHECKERBOARD",
+        exerciseNum: "3",
+        header: "CENTURY_FROM_YEAR",
         instructions: /*html*/ `
-            A checkerboard, aside from its eponymous usage (to play the game checkers!), is a commonly 
-            expressed pattern consisting of alternating squares (usually white and black), laid out 
-            in a 2-dimensional grid - a pattern we can express in terms of "rows" and "columns".
-            <br /><br />
-            Define a function checkerboard that takes two arguments, an integer representing "rows" 
-            and "columns" respectively.
+            A century is defined as a period of 100 years, usuaully used to denote significant 
+            eras in human history. For example, the 20th century, 1900-1999, is considered an era 
+            of substantial human achievement and growth, coinciciding, also, with significant global conflicts.
             <br /> <br />
-            This function should return a checkerboard of the appropriate size (e.g. 8 rows 
-            by 8 columns), with a unique character to represent each alternating color square.
-            <br /> <br />
-            Note: Python secretly appends a newline character ("\\n") to each print statement.
-            To override this behavior, provide a second argument to a print statement (named end),
-            and set its value to an empty string. By default, this second argument, as you might 
-            expect, has a "\\n" value. 
+            Define a function, century_from_year, that derives the correct century from a given 
+            year. Make sure you account for edge cases, such as the year 1999.
             `,
-        links: { previous: "./exercise_1.html", next: "./exercise_3.html" },
+        links: { previous: "./exercise_2.html", next: "./exercise_4.html" },
       });
 
       new PythonEditor();

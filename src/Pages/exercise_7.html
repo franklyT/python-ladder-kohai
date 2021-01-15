@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../CSS/root.min.css" type="text/css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+          rel="stylesheet" />
+    <script src="../js/root-lib.min.js"></script>
+    <script src="../js/root.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      new Head();
+      new Exercise({
+        exerciseNum: "7",
+        header: "FIND_NEEDLE",
+        instructions: /*html*/ `
+            The phrase, "finding a needle in a haystack", is commonly used to denote that something 
+            is extremely difficult to find. Indeed, actually finding a needle inside a haystack 
+            does seem like it would be quite the herculean task, despite questions about what, or why, 
+            you're attempting this in the first place.
+            <br /> <br />
+            Thankfully, programming can make our lives easier. No matter how large the haystack, 
+            a computer can dutifully search for us. Let's demonstrate this principle in practice.
+            <br /> <br />
+            Define a function find_needle that takes one argument, haystack as a list, and prints 
+            out the index of the string "needle" in the list. If no needle is found, print out 
+            None as null.
+            `,
+        links: { previous: "./exercise_5.html", next: "./" },
+      });
+
+      new PythonEditor();
+      
+      new TestCases({
+        cases: {
+          case1: {
+            case: "find_needle(['hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'needle', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay'])",
+            expectedReturn: 'found the needle at position 20',
+          },
+          case2: {
+            case: "find_needle(['hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay'])",
+            expectedReturn: "None",
+          },
+        },
+      });
+
+      new Hints({
+        hints: {
+          hint1: `Firstly, think about how we could simply loop through our string and count how many times the loop ran.
+                  A variable might help here.
+                `,
+          hint2: `There's a particular way we can check to see if each character in our string matches our character:
+                  a simple <a href="https://www.freecodecamp.org/news/if-elif-else-statements/">conditional</a>.
+                `,
+        },
+      });
+
+      new Footer();
+
+      selfDestruct();
+    </script>
+  </body>
+</html>

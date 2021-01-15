@@ -5,10 +5,8 @@
     <link href="../CSS/root.min.css" type="text/css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+          rel="stylesheet" />
     <script src="../js/root-lib.min.js"></script>
     <script src="../js/root.min.js"></script>
   </head>
@@ -17,23 +15,25 @@
     <script>
       new Head();
       new Exercise({
-        exerciseNum: "1",
-        header: "COUNT_CHARS",
+        exerciseNum: "2",
+        header: "CHECKERBOARD",
         instructions: /*html*/ `
-            You probably know, by now, how to 
-            <a href="https://www.freecodecamp.org/news/for-loops-in-python/">iterate through a list</a> 
-            (or <a href="https://www.freecodecamp.org/news/mutable-vs-immutable-objects-python/#immutable-objects-in-python">tuple!</a>). 
-            <br /> <br />In this exercise, you will accomplish
-            a similar task: define a function <span class="def">count_chars</span> that takes two arguments, 
-            the first argument being a string to be checked, and the second argument being a character,
-            (for example, <span class="string">'b'</span>), which we will represent the character
-            we will be counting in the string. For example, <span class="code-block"><span class="def">count_chars</span>(<span class="string">'ABC'</span>, <span class="string">'A'</span>)</span> will print
-            <span class="number">1</span>, as only one instance of the character <span class="string">'A'</span> appears
-            in our string.
+            A checkerboard, aside from its eponymous usage (to play the game checkers!), is a commonly 
+            expressed pattern consisting of alternating squares (usually white and black), laid out 
+            in a 2-dimensional grid - a pattern we can express in terms of "rows" and "columns".
             <br /><br />
-            Iterate through the string and print the resultant characters to the console.
+            Define a function checkerboard that takes two arguments, an integer representing "rows" 
+            and "columns" respectively.
+            <br /> <br />
+            This function should return a checkerboard of the appropriate size (e.g. 8 rows 
+            by 8 columns), with a unique character to represent each alternating color square.
+            <br /> <br />
+            Note: Python secretly appends a newline character ("\\n") to each print statement.
+            To override this behavior, provide a second argument to a print statement (named end),
+            and set its value to an empty string. By default, this second argument, as you might 
+            expect, has a "\\n" value. 
             `,
-        links: { previous: "./exercise_1.html", next: "./" },
+        links: { previous: "./exercise_1.html", next: "./exercise_3.html" },
       });
 
       new PythonEditor();
@@ -41,11 +41,11 @@
       new TestCases({
         cases: {
           case1: {
-            case: "count_chars('abcABC', 'C')",
-            expectedReturn: 1,
+            case: "checkerboard(8, 8)",
+            expectedReturn: '#',
           },
           case2: {
-            case: "count_chars('Hello world!', 'l')",
+            case: "checkerboard('Hello world!', 'l')",
             expectedReturn: 2,
           },
         },
