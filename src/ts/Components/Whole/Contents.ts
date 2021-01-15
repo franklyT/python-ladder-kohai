@@ -27,8 +27,8 @@ class Contents extends KJSComponent {
             <div class="col">
               <h2>EXERCISES</h2>
               <ol>
-                ${Object.keys(this.exercises).map( (key, index) => {
-                  return `<li><a href="./pages/exercise_${index + 1}.html">${this.exercises[key]}</a></li>`
+                ${_.map(this.exercises, (value: string, index: number) => {
+                  return `<li><a href="./pages/${index}.html">${value}</a></li>`
                 }).join('')}
               </ol>
             </div>
@@ -38,8 +38,8 @@ class Contents extends KJSComponent {
               <div class="col">
                 <h2>PROJECTS</h2>
                 <ol>
-                  ${Object.keys(this.projects).map( (key, index) => {
-                    return `<li><a href="./pages/project_${index + 1}.html">${this.projects[key]}</a></li>`
+                  ${_.map(this.projects, (value: string, index: number) => {
+                    return `<li><a href="./pages/project_${index + 1}.html">${value}</a></li>`
                   }).join('')}
                 </ol>
               </div>` : ''}

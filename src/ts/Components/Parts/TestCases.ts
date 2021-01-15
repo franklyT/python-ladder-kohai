@@ -31,23 +31,24 @@ class TestCases extends KJSComponent {
   };
 
   parse(cases: Record<string, any>, appendID: any) {
-    Object.keys(cases).forEach( (testCase:any) => {
+    _.each(cases, (value: any, key: any) => {
       (document.getElementById("test-holder") as HTMLInputElement).value +=
-        cases[testCase].case + "\n";
-      document.getElementById("test-holder")!.innerHTML +=
-        cases[testCase].case + "\n";
+      value.case + "\n";
+    document.getElementById("test-holder")!.innerHTML +=
+      value.case + "\n";
 
-      this.cases[testCase] = cases[testCase];
-      let appendTestCase = document.createElement("p");
-      appendTestCase.innerHTML =
-        cases[testCase].case + " -> " + cases[testCase].expectedReturn + "\n";
+    // @ts-ignore
+    this[key] = value.testCases;
+    let appendTestCase = document.createElement("p");
+    appendTestCase.innerHTML =
+      value.case + " -> " + value.expectedReturn + "\n";
 
-      document.getElementById(appendID)!.appendChild(appendTestCase);
-    });
+    document.getElementById(appendID)!.appendChild(appendTestCase);
+    })
   }
 
   styleCode() {
-    document.querySelectorAll(".code").forEach((elm: any) => {
+    _.each(document.querySelectorAll(".code"), (elm: any) => {
       let code = elm.textContent.trim();
       elm.innerHTML = "";
 
@@ -59,12 +60,13 @@ class TestCases extends KJSComponent {
 
       myCodeMirror.setSize("100%", "auto");
     });
+  
 
   (window as any).testIt = () => {
     // this passed with fat arrow
-    let hasRightAnswers = Object.keys(this.cases).every((separateCase: any) => {
+    let hasRightAnswers = _.every(this.cases, (separateCase: any) => {
       return String(document.getElementById("test-output")!.innerHTML).includes(
-        this.cases[separateCase].expectedReturn
+        separateCase.expectedReturn
       );
     });
 
