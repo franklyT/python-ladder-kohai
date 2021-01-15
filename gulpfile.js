@@ -11,7 +11,7 @@ const CLEAN = require("gulp-clean-css");
 const AUTOPREFIXER = require("gulp-autoprefixer");
 
 GULP.task("build-css", function (cb) {
-  GULP.src("./src/CSS/root.css")
+  GULP.src("./src/CSS/*.css")
     .pipe(CONCAT("root.min.css"))
     .pipe(CLEAN())
     .pipe(
@@ -47,7 +47,7 @@ GULP.task("build-ts", function () {
 });
 
 GULP.task("build-js", function () {
-  return GULP.src(["./src/js/Library/*.js", "./src/js/*.js", "!./src/js/_root/root.js"])
+  return GULP.src(["./src/ts/Script/Libs/*.js", "./src/js/*.js", "!./src/js/_root/root.js"])
   /*.pipe(GBABEL({
     presets: ['@babel/env', ['minify', {
       builtIns: false,
@@ -55,8 +55,9 @@ GULP.task("build-js", function () {
       mangle: false,
     }],],
     plugins: ["module:faster.js"]
-  }))
-*/
+  }))  
+  */
+  .pipe(CONCAT('root-lib.min.js'))
   .pipe(GULP.dest("./dist/js/"));
 });
 

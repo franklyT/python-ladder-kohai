@@ -43,7 +43,7 @@ class Exercise extends KJSComponent {
 
   get html() {
     return /*html*/ `
-      <div class="container ${this.styles.container}">
+     <div class="container ${this.styles.container}">
       <div class="row align-items-center">
         <div class="col">
           <h1 class="${this.styles.exerciseNum} col-sm-4"> Exercise #${

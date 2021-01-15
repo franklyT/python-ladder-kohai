@@ -1,5 +1,5 @@
 class KJSMetaComponent extends KJSBase {
-  constructor() {
+  protected constructor() {
     super();
   }
 
