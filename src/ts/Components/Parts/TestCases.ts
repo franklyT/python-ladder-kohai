@@ -92,10 +92,8 @@ class TestCases extends KJSComponent {
             <div id="test-yourcode" class="code ${this.styles.testYourCode}"> </div>
             <textarea id="test-holder" style="display: none;"></textarea>
             <div class="d-flex">
-   
               <button id="runTestsButton" class="${this.styles.submitButton} btn btn-success" type="button" onclick="runIt('test-yourcode', 'test-output', true); setTimeout( () => {testIt()}, 50)"
-              data-trigger="hover" data-toggle="popover" data-content="Shift+Enter outside code editor"
-              >
+                data-trigger="hover" data-toggle="popover" data-content="Shift+Enter outside code editor">
                 check_code()
               </button>   
             </div> 
