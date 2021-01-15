@@ -39,7 +39,7 @@ class Contents extends KJSComponent {
                 <h2>PROJECTS</h2>
                 <ol>
                   ${_.map(this.projects, (value: string, index: number) => {
-                    return `<li><a href="./pages/project_${index + 1}.html">${value}</a></li>`
+                    return `<li><a href="./pages/project_${index}.html">${value}</a></li>`
                   }).join('')}
                 </ol>
               </div>` : ''}
