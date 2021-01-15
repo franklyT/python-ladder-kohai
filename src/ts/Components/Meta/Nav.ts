@@ -12,22 +12,20 @@ class Nav extends KJSMetaComponent {
   }
 
   styles = {
-    container: 
-      `margin-bottom: 2em;`,
+    container: `margin-bottom: 2em;`,
 
     navSymbol: 
       `font-size: 2.3em; 
        color: #aaa; 
        cursor: pointer;`,
 
-    previous: 
-      `margin-right: 0.2em;`,
+    previous: `margin-right: 0.2em;`,
 
     home: 
       `font-size: 1.4em; 
        margin-bottom: -0.3em;`,
-    next: 
-      `margin-left: 0.2em;`,
+       
+    next: `margin-left: 0.2em;`,
   };
 
   get html() { return /*html*/`
