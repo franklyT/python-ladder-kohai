@@ -22,15 +22,19 @@ class Contents extends KJSComponent {
   get html() {
     return /*html*/ `
           <div class="${this.styles.container} container">
-              <div class="col">
-                <h2>EXERCISES</h2>
-                <ol>
-                  ${Object.keys(this.exercises).map( (key, index) => {
-                    return `<li><a href="./pages/exercise_${index + 1}.html">${this.exercises[key]}</a></li>`
-                  }).join('')}
-                </ol>
-              </div>
 
+            ${this.exercises ? `
+            <div class="col">
+              <h2>EXERCISES</h2>
+              <ol>
+                ${Object.keys(this.exercises).map( (key, index) => {
+                  return `<li><a href="./pages/exercise_${index + 1}.html">${this.exercises[key]}</a></li>`
+                }).join('')}
+              </ol>
+            </div>
+            ` : ''}
+
+            ${this.projects ? `
               <div class="col">
                 <h2>PROJECTS</h2>
                 <ol>
@@ -38,8 +42,9 @@ class Contents extends KJSComponent {
                     return `<li><a href="./pages/project_${index + 1}.html">${this.projects[key]}</a></li>`
                   }).join('')}
                 </ol>
-              </div>
-           </div>
+              </div>` : ''}
+
+          </div>
         `;
   }
 }
