@@ -13,7 +13,6 @@ class Hints extends KJSComponent {
       this.hints = hints;
       
       this.writeComponent();
-  
       this.parse();
     }
   
