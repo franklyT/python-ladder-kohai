@@ -1,5 +1,3 @@
-// CSS configuration
-
 const GULP = require("gulp");
 const GUTIL = require("gulp-util");
 // const GAP = require('gulp-append-prepend');
