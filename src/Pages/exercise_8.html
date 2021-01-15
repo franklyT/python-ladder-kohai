@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../CSS/root.min.css" type="text/css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+          rel="stylesheet" />
+    <script src="../js/root-lib.min.js"></script>
+    <script src="../js/root.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      new Head();
+      new Exercise({
+        exerciseNum: "8",
+        header: "FLIP_COIN",
+        instructions: /*html*/ `
+            The idea of "flipping a coin" has long represented, in American cultural parlance, a 50/50 
+            chance. In reality, flipping an American quarter is only pretty close to 50/50, not actually 50/50!
+            <br /> <br />
+            For our purposes, however, let's assume that flipping a coin represents an exactly 50/50 chance.
+            <br /> <br />
+            Given this, first define a function flip_coin that takes num_flips (integer) as an argument.
+            num_flip times, "flip a coin", so to speak, by producing a mathematical statement with a 50% 
+            chance to represent one of two numbers (the Math object might help!). Assign a counter for 
+            each possibility, incrementing our coin, "heads" or "tails", depending on the outcome.
+            Print out our heads and tails tallies for n. Your outcome should be pretty close to 50/50.
+            <br /> <br />
+            Finally, let's prove it! If you want to pass this exercise, print out a probability estimate 
+            for each counter. For our purposes, probability can be expressed as number of heads or tails 
+            divided by total flips. Use the round function to round to the nearest 1 digit, and multiply it 
+            by 100 to get the probability expressed as a percentage.
+            <br /> <br />
+            Don't be afraid to use hints if you're stuck at any point! Break this exercise down, step-by-step, 
+            to easily solve it. While it may sound complex in summation, each step is quite trivial. Do not 
+            attempt to produce a final program without first slowly working your way there, by producing an 
+            "almost" program!
+            `,
+        links: { previous: "./exercise_7.html", next: "./" },
+      });
+
+      new PythonEditor();
+      
+      new TestCases({
+        cases: {
+          case1: {
+            case: "flip_coin(100)",
+            expectedReturn: "Heads Probability: ~50.0% Tails Probability: ~50.0%",
+          },
+          case2: {
+            case: "flip_coin(10000)",
+            expectedReturn: "Heads Probability: ~50.0% Tails Probability: ~50.0%",
+          },
+        },
+      });
+
+      new Hints({
+        hints: {
+          hint1: `Firstly, think about how we could simply loop through our string and count how many times the loop ran.
+                  A variable might help here.
+                `,
+          hint2: `There's a particular way we can check to see if each character in our string matches our character:
+                  a simple <a href="https://www.freecodecamp.org/news/if-elif-else-statements/">conditional</a>.
+                `,
+        },
+      });
+
+      new Footer();
+
+      selfDestruct();
+    </script>
+  </body>
+</html>
