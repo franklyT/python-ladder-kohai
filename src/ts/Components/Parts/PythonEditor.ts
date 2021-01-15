@@ -45,13 +45,11 @@ class PythonEditor extends KJSComponent {
       outputID: string = "output",
       testing: boolean = false
     ) {
-      // @ts-ignore
-      let prog: HTMLInputElement = document.getElementById(codeID)!.value,
-        mypre: HTMLElement | null = document.getElementById(outputID);
+      let prog: string = (document.getElementById(codeID) as HTMLInputElement).value,
+          mypre: HTMLElement | null = document.getElementById(outputID);
 
       globalOutput = outputID;
 
-      // noinspection PointlessBooleanExpressionJS
       testing === false
         ? (globalInput = editor.getValue())
         : (globalInput =
