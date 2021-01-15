@@ -1,5 +1,5 @@
 class TestCases extends KJSComponent {
-  cases;
+  cases: any;
 
   constructor({ cases }: { cases: String }) {
     super();
@@ -31,13 +31,12 @@ class TestCases extends KJSComponent {
   };
 
   parse(cases: Record<string, any>, appendID: any) {
-    Object.keys(cases).forEach((testCase) => {
+    Object.keys(cases).forEach( (testCase:any) => {
       (document.getElementById("test-holder") as HTMLInputElement).value +=
         cases[testCase].case + "\n";
       document.getElementById("test-holder")!.innerHTML +=
         cases[testCase].case + "\n";
 
-      // @ts-ignore
       this.cases[testCase] = cases[testCase];
       let appendTestCase = document.createElement("p");
       appendTestCase.innerHTML =
@@ -65,7 +64,6 @@ class TestCases extends KJSComponent {
     // this passed with fat arrow
     let hasRightAnswers = Object.keys(this.cases).every((separateCase: any) => {
       return String(document.getElementById("test-output")!.innerHTML).includes(
-        // @ts-ignore
         this.cases[separateCase].expectedReturn
       );
     });
