@@ -22,7 +22,7 @@ class Hints extends KJSComponent {
     }
   
     parse() {    
-      Object.keys(this.hints).forEach((key, index) => {
+      _(this.hints).keys().each( (key, index) => {
         const hintWrapper = document.createElement("div");
         hintWrapper.classList.add("hint");
         hintWrapper.classList.add("hidden-hint");
@@ -51,7 +51,7 @@ class Hints extends KJSComponent {
         (document.getElementById("hintContainer") as HTMLElement).appendChild(
           hintWrapper
         );
-      });
+      })
     }
   
     get html() {
