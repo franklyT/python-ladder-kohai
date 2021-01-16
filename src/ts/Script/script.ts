@@ -19,6 +19,7 @@ function templateTags(str: string) {
     def: "def",
     num: "number",
     str: "string",
+    typ: "type"
   };
 
   _.each(BLOCK_TEMPLATES, (outerVal, outerKey) => {

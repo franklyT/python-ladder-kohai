@@ -19,19 +19,24 @@
       new Exercise({
         exerciseNum: "1",
         header: "COUNT_CHARS",
-        instructions: /*html*/ templateTags(`
-            You probably know, by now, how to 
-            <a href="https://www.freecodecamp.org/news/for-loops-in-python/">iterate through a list</a> 
-            (or <a href="https://www.freecodecamp.org/news/mutable-vs-immutable-objects-python/#immutable-objects-in-python">tuple!</a>). 
-            <br /> <br />In this exercise, you will accomplish
-            a similar task: define a function <sdef|count_chars|ss> that takes two arguments, 
-            the first argument being a string to be checked, and the second argument being a character,
-            (for example, <sstr|'b'|ss>), which we will represent the character
-            we will be counting in the string. For example, <scb|<sdef|count_chars|ss><scb|(|ss><sstr|'ABC'<s| <scb|,'A'|ss>|ss><scb|)|ss>|ss> will print
-            <snum|1|ss>, as only one instance of the character <sstr|'A'|ss> appears
-            in our string.
-            <br /><br />
-            Iterate through the string and print the resultant characters to the console.
+        instructions: templateTags(/*html*/`
+              <p>
+                You probably know, by now, how to <a href="https://www.freecodecamp.org/news/for-loops-in-python/">
+                iterate through a list</a> (or <a href="https://www.freecodecamp.org/news/mutable-vs-immutable-objects-python/#immutable-objects-in-python">tuple!</a>).
+              </p>
+              <p>
+                In this exercise, you will accomplish
+                a similar task: define a function <sdef|count_chars|ss> that takes two arguments, 
+                the first argument being a string, <scb|my_string:|ss> <styp|str|ss> to be checked, and the second argument being a character,
+                <scb|my_char:|ss> <styp|str|ss>
+                (for example, <sstr|'b'|ss>), which we will represent the character
+                we will be counting in the string. For example, <scb|<sdef|count_chars|ss><scb|(|ss><sstr|'ABC'<s|<scb|,'A'|ss>|ss><scb|)|ss>|ss> will print
+                <snum|1|ss>, as only one instance of the character <sstr|'A'|ss> appears
+                in our string.
+              </p>
+              <p>
+                Iterate through the string and print the resultant characters to the console.
+              </p>
             `),
         links: { previous: "./", next: "./exercise_2.html" },
       });

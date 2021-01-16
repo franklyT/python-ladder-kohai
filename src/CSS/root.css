@@ -66,6 +66,10 @@ code {
     color: #00f;
 }
 
+.type {
+    color: #00f;
+}
+
 .code-block {
     font-family: monospace;
 }
@@ -75,7 +79,7 @@ code {
     font-size: 0.90em;
 }
 
-span, .string, .number, .call, .def, .code {
+span, .string, .number, .call, .def, .code, .type {
     font-family: monospace !important;
 }
 

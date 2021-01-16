@@ -17,19 +17,24 @@
       new Exercise({
         exerciseNum: "5",
         header: "ROUND_TO_FIVE",
-        instructions: /*html*/ `
-            Usually, in math, we demand pretty precise numbers. However, sometimes, we're not so picky!
-            Python graciously provides for us the round function in its standard-library, which can be 
-            used to round a number to n decimal places. Pretty slick!
-            <br /> <br />
-            Let's take a step back, and demand even less precision from the numbers that we're dealing 
-            with.
-            <br /> <br />
-            Define a function, round_up_to_five, that takes one argument, num, and prints out that number 
-            rounded up to the nearest 5.
-            <br /> <br />
-            Next, define a function, <sdef|round_down_to_five|ss>, that does the same thing, but rounds down instead.
-            `,
+        instructions: templateTags(/*html*/`
+            <p>
+              Usually, in math, we demand pretty precise numbers. However, sometimes, we're not so picky!
+              Python graciously provides for us the round function in its standard-library, which can be 
+              used to round a number to n decimal places. Pretty slick!
+            </p>
+            <p>
+              Let's take a step back, and demand even less precision from the numbers that we're dealing 
+              with.
+            </p>
+            <p>
+              Define a function, <sdef|round_up_to_five|ss>, that takes one argument, <scb|num:|ss> <styp|int|ss>, and prints out that number 
+              rounded up to the nearest <snum|5|ss>.
+            </p>
+            <p>
+              Next, define a function, <sdef|round_down_to_five|ss>, that does the same thing, but rounds down instead.
+            </p>
+            `),
         links: { previous: "./exercise_4.html", next: "./exercise_6.html" },
       });
 

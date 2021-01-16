@@ -17,24 +17,29 @@
       new Exercise({
         exerciseNum: "4",
         header: "CUSTOM_RANGE",
-        instructions: /*html*/ `
-            The range function in Python is a profoundly common operation, such that we've 
-            probably already used it multiple times in our lessons thus far. As a result, 
-            Python providing us with a built-in definition for range is hugely useful.
-            <br /> <br />
-            In contrast, a language like JavaScript actually has no definition for range in its 
-            "standard library". Those who would like to take advantage of this powerful function 
-            must either import a third-party library with this functionality, or write their own 
-            code.
-            <br /> <br />
-            The good news is that to define a range function is actually a fairly trivial endeavor!
-            As such, we're going to prove it by re-writing a basic <sdef|range|ss> function in Python.
-            You don't need to include the step parameter, which increments a range by a specified 
-            amount instead of just 1, but if you would like, you can!
-            <br /> <br />
-            Define a function, custom_range, that takes two arguments, min and max, that prints out
-            a range, expressed in a list, between the given min and max arguments.
-            `,
+        instructions: templateTags(/*html*/`
+            <p>
+              The <sdef|range|ss> function in Python is a profoundly common operation, such that we've 
+              probably already used it multiple times in our lessons thus far. As a result, 
+              Python providing us with a built-in definition for <sdef|range|ss> is hugely useful.
+            </p>
+            <p>
+              In contrast, a language like JavaScript actually has no definition for <sdef|range|ss> in its 
+              "standard library". Those who would like to take advantage of this powerful function 
+              must either import a third-party library with this functionality, or write their own 
+              code.
+            </p>
+            <p>
+              The good news is that to define a range function is actually a fairly trivial endeavor!
+              As such, we're going to prove it by re-writing a basic <sdef|range|ss> function in Python.
+              You don't need to include the step parameter, which increments a range by a specified 
+              amount instead of just <snum|1|ss>, but if you would like, you can!
+            </p>
+            <p>
+              Define a function, <sdef|custom_range|ss>, that takes two arguments, <scb|min:|ss> <styp|int|ss> and <scb|max:|ss> <styp|int|ss>, that prints out
+              a <sdef|range|ss>, expressed in a list, between the given <scb|min|ss> and <scb|max|ss> arguments.
+            </p>
+            `),
         links: { previous: "./exercise_3.html", next: "./exercise_5.html" },
       });
 

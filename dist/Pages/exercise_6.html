@@ -17,16 +17,19 @@
       new Exercise({
         exerciseNum: "6",
         header: "GET_MIDDLE",
-        instructions: /*html*/ `
-            If asked, someone with two siblings would trivially be able to tell you if they were the 
-            "middle" sibling. Of three, there is one sibling definitively in the middle.
-            <br /> <br />
-            Define a function <sdef|get_middle|ss> that takes one argument, str as a string, and returns the 
-            middle character. Remember, this is an operation that is only technically completely 
-            trivial in one case. If your function cannot find a "middle" character in a given string, 
-            print the middle two characters.
-            `,
-        links: { previous: "./exercise_5.html", next: "./exercise_7" },
+        instructions: templateTags(/*html*/`
+            <p>
+              If asked, someone with two siblings would trivially be able to tell you if they were the 
+              "middle" sibling. Of three, there is one sibling definitively in the middle.
+            </p>
+            <p>
+              Define a function <sdef|get_middle|ss> that takes one argument, <scb|str_input:|ss> <styp|str|ss>, and returns the 
+              middle character. Remember, this is an operation that is only technically completely 
+              trivial in one case. If your function cannot find a "middle" character in a given string, 
+              print the middle two characters.
+            </p>
+            `),
+        links: { previous: "./exercise_5.html", next: "./exercise_7.html" },
       });
 
       new PythonEditor();

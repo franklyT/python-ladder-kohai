@@ -17,20 +17,24 @@
       new Exercise({
         exerciseNum: "7",
         header: "FIND_NEEDLE",
-        instructions: /*html*/ `
-            The phrase, "finding a needle in a haystack", is commonly used to denote that something 
-            is extremely difficult to find. Indeed, actually finding a needle inside a haystack 
-            does seem like it would be quite the herculean task, despite questions about what, or why, 
-            you're attempting this in the first place.
-            <br /> <br />
-            Thankfully, programming can make our lives easier. No matter how large the haystack, 
-            a computer can dutifully search for us. Let's demonstrate this principle in practice.
-            <br /> <br />
-            Define a function <sdef|find_needle|ss> that takes one argument, haystack as a list, and prints 
-            out the index of the string "needle" in the list. If no needle is found, print out 
-            None as null.
-            `,
-        links: { previous: "./exercise_6.html", next: "./exercise_8" },
+        instructions: templateTags(/*html*/`
+            <p>
+              The phrase, "finding a needle in a haystack", is commonly used to denote that something 
+              is extremely difficult to find. Indeed, actually finding a needle inside a haystack 
+              does seem like it would be quite the herculean task, despite questions about what, or why, 
+              you're attempting this in the first place.
+            </p>
+            <p>
+              Thankfully, programming can make our lives easier. No matter how large the haystack, 
+              a computer can dutifully search for us. Let's demonstrate this principle in practice.
+            </p>
+            <p>
+              Define a function <sdef|find_needle|ss> that takes one argument, <scb|haystack:|ss> <styp|list|ss>, and prints 
+              out the index of the string "needle" in the list. If no needle is found, print out 
+              <styp|None|ss> as null.
+            </p>
+            `),
+        links: { previous: "./exercise_6.html", next: "./exercise_8.html" },
       });
 
       new PythonEditor();
