@@ -7,6 +7,7 @@ function selfDestruct() {
   document.currentScript!.remove();
 }
 
+/*
 // templating
 _.each({
   s: "<span ",
@@ -33,6 +34,7 @@ _.each({
       // @ts-ignore
       window[`$_${outerKey}`] = outerVal;
     });
+*/
 /*
 function templateCode(str: string) {
   let classTemplates = {
@@ -64,3 +66,35 @@ function templateCode(str: string) {
   return str;
 }
 */
+
+function templateCode(str: string) {
+  let classTemplates = {
+    call: "call",
+    cb: "code-block",
+    def: "def",
+    num: "number",
+    str: "string",
+  };
+
+  let blockTemplates = {
+    s: "<span ",
+    ss: "</span>"
+  }
+
+  _.each(classTemplates, (outerVal, outerKey) => {
+    _.each(blockTemplates, (innerVal, innerKey) => {
+      if (str.indexOf(key) === -1) return;
+  
+      str = str.replace(`@${key}@`, `${value}`)
+    })
+
+    if (str.indexOf(key) === -1) return;
+		
+    str = str.replace(`@${key}@`, `class="${value}">`);
+    return false;
+  });
+
+  return str;
+}
+
+"@scb@STUFF HERE@ss@";
