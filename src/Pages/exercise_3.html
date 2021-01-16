@@ -17,14 +17,14 @@
       new Exercise({
         exerciseNum: "3",
         header: "CENTURY_FROM_YEAR",
-        instructions: /*html*/ `
+        instructions: /*html*/ templateCode(`
             A century is defined as a period of 100 years, usuaully used to denote significant 
             eras in human history. For example, the 20th century, 1900-1999, is considered an era 
             of substantial human achievement and growth, coinciciding, also, with significant global conflicts.
             <br /> <br />
-            Define a function, century_from_year, that derives the correct century from a given 
+            Define a function, ${$_sdef}century_from_year${$_ss}, that derives the correct century from a given 
             year. Make sure you account for edge cases, such as the year 1999.
-            `,
+            `),
         links: { previous: "./exercise_2.html", next: "./exercise_4.html" },
       });
 
