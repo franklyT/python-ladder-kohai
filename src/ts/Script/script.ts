@@ -7,94 +7,33 @@ function selfDestruct() {
   document.currentScript!.remove();
 }
 
-/*
-// templating
-_.each({
-  s: "<span ",
-  ss: "</span>",
-  d: "<div ",
-  dd: "</div>",
-  p: "<p ",
-  pp: "</p>",
-  h1: "<h1 ",
-  h1h1: "</h1>",
-  h2: "<h2 ",
-  h2h2: "</h2>"
-    }, (outerVal: any, outerKey: any) => {
-      _.each({
-        call: "call",
-        cb: "code-block",
-        def: "def",
-        num: "number",
-        str: "string",
-      }, (innerVal: any, innerKey: any) => {
-        // @ts-ignore
-        window[`$_${outerKey}${innerKey}`] = `${outerVal} class='${innerVal}'>`;
-      });
-      // @ts-ignore
-      window[`$_${outerKey}`] = outerVal;
+function templateTags(str: string) {
+  const BLOCK_TEMPLATES = {
+    s: "<span ",
+    ss: "</span>",
+  };
+
+  const CLASS_TEMPLATES = {
+    call: "call",
+    cb: "code-block",
+    def: "def",
+    num: "number",
+    str: "string",
+  };
+
+  _.each(BLOCK_TEMPLATES, (outerVal, outerKey) => {
+    _.each(CLASS_TEMPLATES, (innerVal, innerKey) => {
+      const FULL_KEY = `${outerKey}${innerKey}`;
+
+      if (str.indexOf(FULL_KEY) === -1) return;
+
+      str = str.split(`<${FULL_KEY}|`).join(`${outerVal} class='${innerVal}'>`);
     });
-*/
-/*
-function templateCode(str: string) {
-  let classTemplates = {
-    call: "call",
-    cb: "code-block",
-    def: "def",
-    num: "number",
-    str: "string",
-  };
 
-  let blockTemplates = {
-    s: "<span ",
-    ss: "</span>"
-  }
+    if (str.indexOf(outerKey) === -1) return;
 
-  _.each(classTemplates, (value, key) => {
-    if (str.indexOf(key) === -1) return;
-		
-    str = str.replace(`&:${key}&`, `class="${value}">`);
-    return false;
-  });
-
-  _.each(blockTemplates, (value, key) => {
-    if (str.indexOf(key) === -1) return;
-
-    str = str.replace(`&:${key}`, `${value}`)
-  })
-
-  return str;
-}
-*/
-
-function templateCode(str: string) {
-  let classTemplates = {
-    call: "call",
-    cb: "code-block",
-    def: "def",
-    num: "number",
-    str: "string",
-  };
-
-  let blockTemplates = {
-    s: "<span ",
-    ss: "</span>"
-  }
-
-  _.each(classTemplates, (outerVal, outerKey) => {
-    _.each(blockTemplates, (innerVal, innerKey) => {
-      if (str.indexOf(key) === -1) return;
-  
-      str = str.replace(`@${key}@`, `${value}`)
-    })
-
-    if (str.indexOf(key) === -1) return;
-		
-    str = str.replace(`@${key}@`, `class="${value}">`);
-    return false;
+    str = str.split(`|${outerKey}>`).join(`${outerVal}`);
   });
 
   return str;
 }
-
-"@scb@STUFF HERE@ss@";
