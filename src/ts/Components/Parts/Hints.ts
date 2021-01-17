@@ -61,4 +61,3 @@ class Hints extends KJSComponent {
         `;
     }
   }
-  
