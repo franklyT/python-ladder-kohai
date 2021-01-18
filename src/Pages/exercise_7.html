@@ -17,7 +17,7 @@
       new Exercise({
         exerciseNum: "7",
         header: "FIND_NEEDLE",
-        instructions: templateTags(/*html*/`
+        instructions: shorthandTags(/*html*/`
             <p>
               The phrase, "finding a needle in a haystack", is commonly used to denote that something 
               is extremely difficult to find. Indeed, actually finding a needle inside a haystack 
@@ -29,9 +29,9 @@
               a computer can dutifully search for us. Let's demonstrate this principle in practice.
             </p>
             <p>
-              Define a function <sdef|find_needle|ss> that takes one argument, <scb|haystack:|ss> <styp|list|ss>, and prints 
+              Define a function <s c|def>find_needle</s> that takes one argument, <s c|code-block>haystack</s> <s c|type>list</s>, and prints 
               out the index of the string "needle" in the list. If no needle is found, print out 
-              <styp|None|ss> as null.
+              <s c|type>None</s> as null.
             </p>
             `),
         links: { previous: "./exercise_6.html", next: "./exercise_8.html" },

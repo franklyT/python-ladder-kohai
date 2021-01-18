@@ -17,7 +17,7 @@
       new Exercise({
         exerciseNum: "5",
         header: "ROUND_TO_FIVE",
-        instructions: templateTags(/*html*/`
+        instructions: shorthandTags(/*html*/`
             <p>
               Usually, in math, we demand pretty precise numbers. However, sometimes, we're not so picky!
               Python graciously provides for us the round function in its standard-library, which can be 
@@ -28,11 +28,11 @@
               with.
             </p>
             <p>
-              Define a function, <sdef|round_up_to_five|ss>, that takes one argument, <scb|num:|ss> <styp|int|ss>, and prints out that number 
-              rounded up to the nearest <snum|5|ss>.
+              Define a function, <s c|def>round_up_to_five</s>, that takes one argument, <s c|code-block>num:</s> <s c|type>int</s>, and prints out that number 
+              rounded up to the nearest <s c|num>5</s>.
             </p>
             <p>
-              Next, define a function, <sdef|round_down_to_five|ss>, that does the same thing, but rounds down instead.
+              Next, define a function, <s def>round_down_to_five</s>, that does the same thing, but rounds down instead.
             </p>
             `),
         links: { previous: "./exercise_4.html", next: "./exercise_6.html" },
