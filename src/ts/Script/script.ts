@@ -7,33 +7,25 @@ function selfDestruct() {
   document.currentScript!.remove();
 }
 
-function templateTags(str: string) {
+function shorthandTags(str: string) {
   const BLOCK_TEMPLATES = {
-    s: "<span ",
-    ss: "</span>",
+    "<s": "<span",
+    "s>": "span>",
+    "<d": "<div",
+    "d>": "div>"
   };
 
-  const CLASS_TEMPLATES = {
-    call: "call",
-    cb: "code-block",
-    def: "def",
-    num: "number",
-    str: "string",
-    typ: "type"
+  const MOD_TEMPLATES = {
+    "c|": "class=",
+    "h|": "href=",
   };
 
-  _.each(BLOCK_TEMPLATES, (outerVal, outerKey) => {
-    _.each(CLASS_TEMPLATES, (innerVal, innerKey) => {
-      const FULL_KEY = `${outerKey}${innerKey}`;
+  _(BLOCK_TEMPLATES).each((blockVal, blockKey) => {
+    if (str.indexOf(blockKey) !== -1) str = str.split(blockKey).join(blockVal);
+  });
 
-      if (str.indexOf(FULL_KEY) === -1) return;
-
-      str = str.split(`<${FULL_KEY}|`).join(`${outerVal} class='${innerVal}'>`);
-    });
-
-    if (str.indexOf(outerKey) === -1) return;
-
-    str = str.split(`|${outerKey}>`).join(`${outerVal}`);
+  _(MOD_TEMPLATES).each((modVal, modKey) => {
+    if (str.indexOf(modKey) === -1) str = str.split(modKey).join(modVal);
   });
 
   return str;
