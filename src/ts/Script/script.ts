@@ -16,8 +16,9 @@ function shorthandTags(str: string) {
   };
 
   const MOD_TEMPLATES = {
-    "c|": "class=",
-    "h|": "href=",
+    "c|": "class",
+    "h|": "href",
+    "oc|": "onclick"
   };
 
   _(BLOCK_TEMPLATES).each((blockVal, blockKey) => {
@@ -25,7 +26,7 @@ function shorthandTags(str: string) {
   });
 
   _(MOD_TEMPLATES).each((modVal, modKey) => {
-    if (str.indexOf(modKey) === -1) str = str.split(modKey).join(modVal);
+    if (str.indexOf(modKey) === -1) str = str.split(modKey).join(`${modVal}=`);
   });
 
   return str;

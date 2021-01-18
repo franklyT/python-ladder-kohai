@@ -17,25 +17,25 @@
       new Exercise({
         exerciseNum: "2",
         header: "CHECKERBOARD",
-        instructions: templateTags( /*html*/`
+        instructions: shorthandTags( /*html*/`
             <p>
               A checkerboard, aside from its eponymous usage (to play the game checkers!), is a commonly 
               expressed pattern consisting of alternating squares (usually white and black), laid out 
-              in a 2-dimensional grid - a pattern we can express in terms of <scb|rows|ss> and <scb|columns|ss>.
+              in a 2-dimensional grid - a pattern we can express in terms of <s c|code-block>rows</s> and <s c|code-block>columns</s>.
             </p>
             <p>
-              Define a function checkerboard that takes two arguments, <scb|rows:|ss> <styp|int|ss> and <scb|cols:|ss> 
-              <styp|int|ss>.
+              Define a function checkerboard that takes two arguments, <s c|code-block>rows:</s> <s c|type>int</s> and <s c|code-block>cols:</s> 
+              <s c|type>int</s>.
             </p>
             <p>
-              This function should return a checkerboard of the appropriate size (e.g. <snum|8|ss> <scb|rows|ss> 
-              by <snum|8|ss> <scb|columns|ss>), with a unique character to represent each alternating color square.
+              This function should return a checkerboard of the appropriate size (e.g. <s c|num>8</s> <s c|code-block>rows</s> 
+              by <s c|num>8</s> <s c|code-block>columns</s>), with a unique character to represent each alternating color square.
             </p>
             <p>
-              <b>Note</b>: Python secretly appends a newline character (<sstr|"\\n"|ss>) to each print statement.
-              To override this behavior, provide a second argument to a print statement (named <scb|end|ss>),
+              <b>Note</b>: Python secretly appends a newline character (<s c|str>"\\n"</s>) to each print statement.
+              To override this behavior, provide a second argument to a print statement (named <s c|code-block>end</s>),
               and set its value to an empty string. By default, this second argument, as you might 
-              expect, has a <sstr|"\\n"|ss> value.
+              expect, has a <s c|str>"\\n"</s> value.
             </p>
             `),
         links: { previous: "./exercise_1.html", next: "./exercise_3.html" },
