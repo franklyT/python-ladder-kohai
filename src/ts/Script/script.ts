@@ -12,13 +12,13 @@ function shorthandTags(str: string) {
     "<s": "<span",
     "s>": "span>",
     "<d": "<div",
-    "d>": "div>"
+    "d>": "div>",
   };
 
   const MOD_TEMPLATES = {
     "c|": "class",
     "h|": "href",
-    "oc|": "onclick"
+    "oc|": "onclick",
   };
 
   _(BLOCK_TEMPLATES).each((blockVal, blockKey) => {
