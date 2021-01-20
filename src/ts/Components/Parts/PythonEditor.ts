@@ -45,8 +45,8 @@ class PythonEditor extends KJSComponent {
       outputID: string = "output",
       testing: boolean = false
     ) {
-      let prog: string = (document.getElementById(codeID) as HTMLInputElement).value,
-          mypre: HTMLElement | null = document.getElementById(outputID);
+      let prog: string = (document.getElementById(codeID) as HTMLInputElement).value;
+      let mypre: HTMLElement | null = document.getElementById(outputID);
 
       globalOutput = outputID;
 
