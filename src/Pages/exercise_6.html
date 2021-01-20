@@ -17,13 +17,13 @@
       new Exercise({
         exerciseNum: "6",
         header: "GET_MIDDLE",
-        instructions: templateTags(/*html*/`
+        instructions: shorthandTags(/*html*/`
             <p>
               If asked, someone with two siblings would trivially be able to tell you if they were the 
               "middle" sibling. Of three, there is one sibling definitively in the middle.
             </p>
             <p>
-              Define a function <sdef|get_middle|ss> that takes one argument, <scb|str_input:|ss> <styp|str|ss>, and returns the 
+              Define a function <s c|def>get_middle</s> that takes one argument, <s c|code-block>str_input</s> <s c|type>str</s>, and returns the 
               middle character. Remember, this is an operation that is only technically completely 
               trivial in one case. If your function cannot find a "middle" character in a given string, 
               print the middle two characters.
