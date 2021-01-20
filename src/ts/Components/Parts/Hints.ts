@@ -17,40 +17,32 @@ class Hints extends KJSComponent {
     }
   
     hintsUsed() {
-      return document.querySelectorAll("." + this.styles.hintCounterHelper)
-        .length;
+      return document.querySelectorAll("." + this.styles.hintCounterHelper).length;
     }
   
     parse() {    
-      Object.keys(this.hints).forEach((key, index) => {
-        const hintWrapper = document.createElement("div");
-        hintWrapper.classList.add("hint");
-        hintWrapper.classList.add("hidden-hint");
+      Object.keys(this.hints).forEach( (key, index) => {        
+        const HINT_WRAPPER = document.createElement("div");
+        HINT_WRAPPER.classList.add("hint", "hidden-hint");
   
-        const hintText = document.createElement("p");
-        hintText.innerHTML = this.hints[key];
+        const HINT_TEXT = document.createElement("p");
+        HINT_TEXT.innerHTML = this.hints[key];
   
-        const hintButton = document.createElement("div");
-        hintButton.classList.add(this.styles.hintButton);
+        const HINT_BUTTON = document.createElement("div");
+        HINT_BUTTON.classList.add(this.styles.hintButton);
   
-        hintButton.innerHTML = `» Hint ${index + 1}...`;
+        HINT_BUTTON.innerHTML = `» Hint ${index + 1}...`;
   
-        document.getElementById("hintContainer")?.appendChild(hintButton);
+        document.getElementById("hintContainer")?.appendChild(HINT_BUTTON);
   
-        hintButton.addEventListener("click", () => {
-          document
-            .querySelectorAll(".hint")
-            [index].classList.add(this.styles.hintCounterHelper);
-          document
-            .querySelectorAll(".hint")
-            [index].classList.toggle("hidden-hint");
+        HINT_BUTTON.addEventListener("click", () => {
+          document.querySelectorAll(".hint")[index].classList.add(this.styles.hintCounterHelper);
+          document.querySelectorAll(".hint")[index].classList.toggle("hidden-hint");
         });
   
-        hintWrapper.appendChild(hintText);
+        HINT_WRAPPER.appendChild(HINT_TEXT);
   
-        (document.getElementById("hintContainer") as HTMLElement).appendChild(
-          hintWrapper
-        );
+        (document.getElementById("hintContainer") as HTMLElement).appendChild(HINT_WRAPPER);
       });
     }
   
