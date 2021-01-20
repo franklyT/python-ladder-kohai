@@ -46,12 +46,12 @@
       new TestCases({
         cases: {
           case1: {
-            case: "checkerboard(8, 8)",
+            case: "print(checkerboard(8, 8))",
             expectedReturn: '#',
           },
           case2: {
-            case: "checkerboard('Hello world!', 'l')",
-            expectedReturn: 2,
+            case: "print(checkerboard(8, 8))",
+            expectedReturn: '#',
           },
         },
       });
@@ -62,6 +62,7 @@
                 `,
           hint2: `
                 `,
+          solution: `<p><a href="https://github.com/franklyT/basic-student-exercises/blob/main/Python/checkerboard/checkerboard.py">The solution.</a></p>`
         },
       });
 

@@ -46,12 +46,12 @@
       new TestCases({
         cases: {
           case1: {
-            case: "count_chars('abcABC', 'C')",
+            case: "print(count_chars('abcABC', 'C'))",
             expectedReturn: 1,
           },
           case2: {
-            case: "count_chars('Hello world!', 'l')",
-            expectedReturn: 2,
+            case: "print(count_chars('Hello world!', 'l'))",
+            expectedReturn: 3,
           },
         },
       });
@@ -64,6 +64,7 @@
           hint2: `There's a particular way we can check to see if each character in our string matches our character:
                   a simple <a href="https://www.freecodecamp.org/news/if-elif-else-statements/">conditional</a>.
                 `,
+          solution: `<p><a href="https://github.com/franklyT/basic-student-exercises/blob/main/Python/count_chars/count_chars.py">The solution.</a></p>`
         },
       });
 

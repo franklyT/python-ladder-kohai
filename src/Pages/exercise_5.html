@@ -43,12 +43,12 @@
       new TestCases({
         cases: {
           case1: {
-            case: "checkerboard(8, 8)",
-            expectedReturn: '#',
+            case: "print(round_to_five(3))",
+            expectedReturn: 5,
           },
           case2: {
-            case: "checkerboard('Hello world!', 'l')",
-            expectedReturn: 2,
+            case: "print(round_to_five(28))",
+            expectedReturn: 30,
           },
         },
       });
@@ -59,6 +59,7 @@
                 `,
           hint2: `
                 `,
+          solution: `<p><a href="https://github.com/franklyT/basic-student-exercises/blob/main/Python/round_to_five/round_to_five.py">The solution.</a></p>`
         },
       });
 

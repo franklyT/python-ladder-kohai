@@ -42,11 +42,11 @@
       new TestCases({
         cases: {
           case1: {
-            case: "find_needle(['hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'needle', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay'])",
-            expectedReturn: 'found the needle at position 20',
+            case: "print(find_needle(['hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'needle', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay']))",
+            expectedReturn: "found the needle at position 20",
           },
           case2: {
-            case: "find_needle(['hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay'])",
+            case: "print(find_needle(['hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay', 'hay']))",
             expectedReturn: "None",
           },
         },
@@ -58,6 +58,7 @@
                 `,
           hint2: `
                 `,
+          solution: `<p><a href="https://github.com/franklyT/basic-student-exercises/blob/main/Python/find_needle/find_needle.py">The solution.</a></p>`
         },
       });
 

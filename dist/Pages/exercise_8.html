@@ -44,8 +44,14 @@
               attempt to produce a final program without first slowly working your way there, by producing an 
               "almost" program!
             </p>
+            <p>
+              One final thing! When you write the code successfully, you'll find that the smaller number of flips, 100, 
+              will more often return anamolous results, in other words, print a spread *different* from 50/50. Sometimes, 
+              it will print 40/60, or 60/40! The 1000 result will much, much less often do this. This is known as 
+              <a h|en.wikipedia.org/wiki/Regression_toward_the_mean>regression to the mean</a>.
+            </p>
             `),
-        links: { previous: "./exercise_7.html", next: "./" },
+        links: { previous: "./exercise_7.html", next: "" },
       });
 
       new PythonEditor();
@@ -53,11 +59,11 @@
       new TestCases({
         cases: {
           case1: {
-            case: "flip_coin(100)",
+            case: "print(flip_coin(100))",
             expectedReturn: "Heads Probability: ~50.0% Tails Probability: ~50.0%",
           },
           case2: {
-            case: "flip_coin(10000)",
+            case: "print(flip_coin(10000))",
             expectedReturn: "Heads Probability: ~50.0% Tails Probability: ~50.0%",
           },
         },
@@ -69,6 +75,7 @@
                 `,
           hint2: `
                 `,
+          solution: `<p><a href="https://github.com/franklyT/basic-student-exercises/blob/main/Python/flip_coin/flip_coin.py">The solution.</a></p>`
         },
       });
 

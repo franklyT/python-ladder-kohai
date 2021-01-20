@@ -48,12 +48,12 @@
       new TestCases({
         cases: {
           case1: {
-            case: "checkerboard(8, 8)",
-            expectedReturn: '#',
+            case: "print(custom_range(1, 5))",
+            expectedReturn: [1, 2, 3, 4],
           },
           case2: {
-            case: "checkerboard('Hello world!', 'l')",
-            expectedReturn: 2,
+            case: "print(custom_range(3, 7))",
+            expectedReturn: [3, 4, 5, 6],
           },
         },
       });
@@ -64,6 +64,7 @@
                 `,
           hint2: `
                 `,
+          solution: `<p><a href="https://github.com/franklyT/basic-student-exercises/blob/main/Python/custom_range/custom_range.py">The solution.</a></p>`
         },
       });
 
