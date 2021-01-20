@@ -33,7 +33,9 @@ class Hints extends KJSComponent {
     }
 
     toggleHintVisibility(index: number) {
-      return document.querySelectorAll(".hint")[index].classList.add(this.styles.hintCounterHelper), document.querySelectorAll(".hint")[index].classList.toggle("hidden-hint");
+      const HINT_ELM = document.querySelectorAll(".hint")[index];
+      HINT_ELM.classList.add(this.styles.hintCounterHelper);
+      HINT_ELM.classList.toggle("hidden-hint");
     }
 
     getHintButton(index: number) {
@@ -69,16 +71,17 @@ class Hints extends KJSComponent {
     }
   
     parse() {    
+      const HINT_CONTAINER = (document.getElementById("hintContainer") as HTMLElement);
       const HINT_KEYS = Object.keys(this.hints);
 
       HINT_KEYS.forEach( (key, index) => {        
+        const HINT_ELEMENT = this.getHintElement(key);
         let toggleHint = this.getHintButton(index);
-        let hintElement = this.getHintElement(key);
 
         if (HINT_KEYS.length === index + 1) toggleHint = this.addSolutionWarning(toggleHint, index);
 
-        document.getElementById("hintContainer")?.appendChild(toggleHint);
-        document.getElementById("hintContainer")?.appendChild(hintElement);
+        HINT_CONTAINER.appendChild(toggleHint);
+        HINT_CONTAINER.appendChild(HINT_ELEMENT);
       });
     }
   
