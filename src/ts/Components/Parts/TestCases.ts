@@ -9,7 +9,6 @@ class TestCases extends KJSComponent {
     this.writeComponent();
 
     this.parse(this.cases, "test-yourcode");
-    enableBootstrapPopovers();
     this.styleCode();
   }
 
