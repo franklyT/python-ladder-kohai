@@ -1,6 +1,6 @@
 class Head extends KJSMetaComponent {
   styles: any;
-  
+
   constructor() {
     super();
 
