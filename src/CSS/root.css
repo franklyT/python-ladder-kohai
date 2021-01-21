@@ -162,27 +162,7 @@ button {
   font-weight: 700;
   text-shadow: 2px 2px black;
   position: absolute;
-}
-
-#test-output {
-  border: 1px solid gainsboro;
-  padding: 2.5em 1em 1em 1em;
-  margin-left: 0.3em;
-  /* background-color: black;*/
-}
-
-#test-output:before {
-  content: "TESTS SHELL";
-  margin-top: -2.5em;
-  margin-left: -1em;
-  padding: 0.3em 0.3em 0.3em 0.3em;
-  border-bottom-right-radius: 0.7em;
-  background-color: gray;
-  color: white;
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-shadow: 2px 2px black;
-  position: absolute;
+  box-shadow: 2px 3px 2px black;
 }
 
 /* Bootstrap Shims */
