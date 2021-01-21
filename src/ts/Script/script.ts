@@ -113,7 +113,7 @@ window.addEventListener("load", function () {
   );
 });
 
-(function addRunShortCuts() {
+window.addEventListener("load", (function addRunShortCuts() {
   document
     .querySelectorAll(".CodeMirror")[0]
     .addEventListener("keydown", (evt) => {
@@ -136,6 +136,6 @@ window.addEventListener("load", function () {
       (document.querySelector("#runTestsButton") as HTMLElement).click();
     }
   });
-})();
+}));
 
 /* SKULPT END */
