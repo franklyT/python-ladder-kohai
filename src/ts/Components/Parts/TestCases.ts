@@ -26,7 +26,7 @@ class TestCases extends KJSComponent {
 
     // testOutput: `font-size: 0.7rem; height: 8vh;`,
 
-    testYourCode: `margin-bottom: 1em;`,
+    testYourCode: `margin-bottom: 1em; width: fit-content; padding-right: 2em;`,
   };
 
   parse(cases: Record<string, any>, appendID: any) {
