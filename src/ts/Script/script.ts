@@ -58,8 +58,7 @@ function runIt(
   outputID: string = "output",
   testing: boolean = false
 ) {
-  let prog: string = (document.getElementById(codeID) as HTMLInputElement)
-    .value;
+  let prog: string = (document.getElementById(codeID) as HTMLInputElement).value;
   let mypre: HTMLElement | null = document.getElementById(outputID);
 
   skulptGlobalOutput = outputID;
@@ -84,7 +83,7 @@ function runIt(
   });
   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = "mycanvas";
 
-  let myPromise = Sk.misceval.asyncToPromise(() => {
+  let myPromise = Sk.misceval.asyncToPromise( () => {
     return Sk.importMainWithBody("<stdin>", false, skulptGlobalInput, true);
   });
 
