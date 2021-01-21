@@ -74,9 +74,7 @@ class TestCases extends KJSComponent {
       } else {
         document.querySelector('#test-yourcode')!.querySelectorAll('.CodeMirror-line')[INDEX_NUM].innerHTML += `<span class="testFeedback" id=testLine${INDEX_NUM} style="color: red;"> X</span>`;
       }
-      // return String(document.getElementById("test-output")!.innerHTML).includes(separateCase.expectedReturn);
     });
-    return;
   };
 }
 
