@@ -1,138 +1,188 @@
-body, html {
-    width: auto;
-    height: 100%;
-    padding: 0;
-    background-color: white !important;
-    font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif !important;
-    line-height: 1.45 !important;
-    margin: 1vh 0 0;
-    color: black !important;
-    font-size: 1.08em !important;
-    overflow-wrap: break-word !important;
+body,
+html {
+  width: auto;
+  height: 100%;
+  padding: 0;
+  background-color: white !important;
+  font-family: Georgia, "Nimbus Roman No9 L", "Century Schoolbook L", serif !important;
+  line-height: 1.45 !important;
+  margin: 1vh 0 0;
+  color: black !important;
+  font-size: 1.08em !important;
+  overflow-wrap: break-word !important;
 }
 
 textarea {
-    width: 100%;
-    height: 15.70em;
-    resize: none;
-    border-radius: 0.5em;
-    border-color: white;
-    color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 15.7em;
+  resize: none;
+  border-radius: 0.5em;
+  border-color: white;
+  color: rgba(255, 255, 255, 0);
 }
 
 .exercise-body {
-    margin-left: 20vw;
-    margin-right: 20vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
-h1, h2, h3 {
-    font-family: "Cinzel", "Droid Serif", "sans-serif" !important;
-    letter-spacing: 2px;
-    font-weight: 700 !important;
-    font-size: 1.4em !important;
-    margin: 1em !important;
-    margin-left: 0 !important;
-    white-space: nowrap !important;
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", "Droid Serif", "sans-serif" !important;
+  letter-spacing: 2px;
+  font-weight: 700 !important;
+  font-size: 1.4em !important;
+  margin: 1em !important;
+  margin-left: 0 !important;
+  white-space: nowrap !important;
 }
 
 li {
-    line-height: 1.6 !important;
+  line-height: 1.6 !important;
 }
 
 a {
-    color: #9f82b2 !important;
-    font-weight: 600;
+  color: #9f82b2 !important;
+  font-weight: 600;
 }
 
 code {
-    color: #00f !important;
-    font-family: monospace;
-    font-size: 1em !important;
+  color: #00f !important;
+  font-family: monospace;
+  font-size: 1em !important;
 }
 
 .string {
-    color: #a11;
+  color: #a11;
 }
 
 .number {
-    color: #164;
+  color: #164;
 }
 
 .call {
-    color: #708;
+  color: #708;
 }
 
 .def {
-    color: #00f;
+  color: #00f;
 }
 
 .type {
-    color: #00f;
+  color: #00f;
 }
 
 .code-block {
-    font-family: monospace;
+  font-family: monospace;
 }
 
 .code {
-    font-family: monospace;
-    font-size: 0.90em;
+  font-family: monospace;
+  font-size: 0.9em;
 }
 
-span, .string, .number, .call, .def, .code, .type {
-    font-family: monospace !important;
+span,
+.string,
+.number,
+.call,
+.def,
+.code,
+.type {
+  font-family: monospace !important;
 }
 
 .root__container {
-    display: block;
-    width: 100vw;
-    height: fit-content;
+  display: block;
+  width: 100vw;
+  height: fit-content;
 }
 
 button {
-    border: none;
-    border-radius: 1em !important;
+  border: none;
+  border-radius: 1em !important;
 }
 
 .hint {
-    max-height: 20vh;
-    height: auto;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
+  max-height: 20vh;
+  height: auto;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
 .hidden-hint {
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
 
 .CodeMirror {
-    /* Bootstrap Settings */
-    box-sizing: border-box;
-    margin: 0;
-    display: block;
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: none; /* Bootstrap 4 */
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    /* Code Mirror Settings */
-    font-family: monospace;
-    position: relative;
-    overflow: hidden;
-  }
-      
-  .CodeMirror-focused {
-    /* Bootstrap Settings */
-    border-color: lightblue;
-    outline: 0;
-    box-shadow: 0 0 0 .05rem lightblue; /* Bootstrap 4 */
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  }
+  /* Bootstrap Settings */
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none; /* Bootstrap 4 */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /* Code Mirror Settings */
+  font-family: monospace;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* Bootstrap Shims */
+.CodeMirror-focused {
+  /* Bootstrap Settings */
+  border-color: lightblue;
+  outline: 0;
+  box-shadow: 0 0 0 0.05rem lightblue; /* Bootstrap 4 */
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+#output {
+  border: 1px solid gainsboro;
+  padding: 2.5em 1em 1em 1em;
+  margin-left: 0.3em;
+  /* background-color: black;*/
+}
+
+#output:before {
+  content: "SHELL";
+  margin-top: -2.5em;
+  margin-left: -1em;
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  border-bottom-right-radius: 0.7em;
+  background-color: gray;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px black;
+  position: absolute;
+}
+
+#test-output {
+  border: 1px solid gainsboro;
+  padding: 2.5em 1em 1em 1em;
+  margin-left: 0.3em;
+  /* background-color: black;*/
+}
+
+#test-output:before {
+  content: "TESTS SHELL";
+  margin-top: -2.5em;
+  margin-left: -1em;
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  border-bottom-right-radius: 0.7em;
+  background-color: gray;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-shadow: 2px 2px black;
+  position: absolute;
+}
+
+/* Bootstrap Shims */

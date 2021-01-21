@@ -31,9 +31,9 @@ class Nav extends KJSMetaComponent {
   get html() { 
     return /*html*/`
         <div class="row justify-content-end ml-auto">
-            <div onclick="window.location.href='${this.previousLink}'" class="${this.styles.navSymbol} ${this.styles.previous}">«</div>
-            <div onclick="window.location.href='../index.html'" class="${this.styles.navSymbol} ${this.styles.home} align-self-center">◆</div>
-            <div onclick="window.location.href='${this.nextLink}'" class="${this.styles.navSymbol} ${this.styles.next}">»</div>
+            <div id="elmPrev" onclick="window.location.href='${this.previousLink}'" class="${this.styles.navSymbol} ${this.styles.previous}">«</div>
+            <div id="elmHome" onclick="window.location.href='../index.html'" class="${this.styles.navSymbol} ${this.styles.home} align-self-center">◆</div>
+            <div id="elmNext" onclick="window.location.href='${this.nextLink}'" class="${this.styles.navSymbol} ${this.styles.next}">»</div>
         </div>
       `;
   }

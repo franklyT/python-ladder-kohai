@@ -22,7 +22,7 @@ class PythonEditor extends KJSComponent {
     return /*html*/ `
         <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col" style="padding-right: 0em !important;">
                 <textarea id="yourcode"># Your code goes under this line&#10;&#10;</textarea>
                 <div class="align-items-end d-flex">
                   <button class="${this.styles.submitButton} btn btn-primary ml-auto" id="runShellButton" type="button" onclick="runIt()"
@@ -32,9 +32,8 @@ class PythonEditor extends KJSComponent {
                   </button>       
                </div>
           </div>
-          <div class="col">
-            <pre id="output" style="min-height: 30vh;"></pre>
-          </div>
+          <div class="col" style="padding-left: 0em !important;">
+            <pre id="output" style="height: 82%;"></pre>
         </div>
       </div>
       <div id="mycanvas"></div>
