@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../CSS/root.min.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="../js/root-lib.min.js"></script>
+    <script src="../js/root.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      new Head();
+      new Exercise({
+        exerciseNum: "5",
+        header: "ROUND_TO_FIVE",
+        instructions: shorthandTags(/*html*/`
+            <p>
+              Usually, in math, we demand pretty precise numbers. However, sometimes, we're not so picky!
+              Python graciously provides for us the round function in its standard-library, which can be 
+              used to round a number to n decimal places. Pretty slick!
+            </p>
+            <p>
+              Let's take a step back, and demand even less precision from the numbers that we're dealing 
+              with.
+            </p>
+            <p>
+              Define a function, <s c|def>round_up_to_five</s>, that takes one argument, <s c|code-block>num:</s> <s c|type>int</s>, and prints out that number 
+              rounded up to the nearest <s c|num>5</s>.
+            </p>
+            <p>
+              Next, define a function, <s def>round_down_to_five</s>, that does the same thing, but rounds down instead.
+            </p>
+            `),
+        links: { previous: "./exercise_4.html", next: "./exercise_6.html" },
+      });
+
+      new PythonEditor();
+      
+      new TestCases({
+        cases: {
+          case1: {
+            case: "print(round_to_five(3))",
+            expectedReturn: 5,
+          },
+          case2: {
+            case: "print(round_to_five(28))",
+            expectedReturn: 30,
+          },
+        },
+      });
+
+      new Hints({
+        hints: {
+          hint1: `.
+                `,
+          hint2: `
+                `,
+          solution: shorthandTags(`<p><a h|https://github.com/franklyT/basic-student-exercises/blob/main/Python/round_to_five/round_to_five.py>-> The solution.</a></p>`)
+        },
+      });
+
+      new Footer();
+
+      selfDestruct();
+    </script>
+  </body>
+</html>

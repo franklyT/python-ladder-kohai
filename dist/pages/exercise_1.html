@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../CSS/root.min.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="../js/root-lib.min.js"></script>
+    <script src="../js/root.min.js"></script>
+  </head>
+
+  <body class="exercise-body">
+
+    <script>
+      new Head();
+      new Exercise({
+        exerciseNum: "1",
+        header: "COUNT_CHARS",
+        instructions: shorthandTags(/*html*/`
+              <p>
+                You probably know, by now, how to <a h|https://www.freecodecamp.org/news/for-loops-in-python/>
+                iterate through a list</a> (or <a h|https://www.freecodecamp.org/news/mutable-vs-immutable-objects-python/#immutable-objects-in-python>tuple!</a>).
+              </p>
+              <p>
+                In this exercise, you will accomplish
+                a similar task: define a function <s c|def> count_chars </s> that takes two arguments, 
+                the first argument being a string, <s c|code-block> my_string: </s> <s c|type>str</s> to be checked, and the second argument being a character,
+                <s c|code-block>my_char:</s> <s c|type>str</s>
+                (for example, <s c|str>'b'</s>), which we will represent the character
+                we will be counting in the string. For example, <s c|code-block><s c|def>count_chars</s><s c|code-block>(</s><s c|str>'ABC'<s><s code-block>,'A'</s></s><s c|code-block>)</s></s></s> will print
+                <s c|num>1</s>, as only one instance of the character <s c|str>'A'</s> appears
+                in our string.
+              </p>
+              <p>
+                Iterate through the string and print the resultant characters to the console.
+              </p>
+            `),
+        links: { previous: "", next: "./exercise_2.html" },
+      });
+
+      new PythonEditor();
+      
+      new TestCases({
+        cases: {
+          case1: {
+            case: "print(count_chars('abcABC', 'C'))",
+            expectedReturn: 1,
+          },
+          case2: {
+            case: "print(count_chars('Hello world!', 'l'))",
+            expectedReturn: 3,
+          },
+        },
+      });
+
+      new Hints({
+        hints: {
+          hint1: `Firstly, think about how we could simply loop through our string and count how many times the loop ran.
+                  A variable might help here.
+                `,
+          hint2: shorthandTags(`There's a particular way we can check to see if each character in our string matches our character:
+                  a simple <a h|https://www.freecodecamp.org/news/if-elif-else-statements/>conditional</a>.
+                `),
+          solution: shorthandTags(`<p><a h|https://github.com/franklyT/basic-student-exercises/blob/main/Python/count_chars/count_chars.py>-> The solution.</a></p>`)
+        },
+      });
+
+      new Footer();
+
+      selfDestruct();
+    </script>
+  </body>
+</html>
